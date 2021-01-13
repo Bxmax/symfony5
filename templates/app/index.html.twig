@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Hello AppController!</title>
+
+{% block body %}
+    <h1>Articles : ({{ articles.getTotalItemCount }})</h1>
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.title }}</li>
+        {% endfor %}
+    </ul>
+    {{ knp_pagination_render(articles) }}
+{% endblock %}
